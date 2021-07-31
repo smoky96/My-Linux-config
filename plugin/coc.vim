@@ -44,8 +44,8 @@ call coc#config("languageserver", {
       \},
       \})
 
-call coc#config("git.addGBlameToVirtualText", v:true)
-call coc#config("git.virtualTextPrefix", "👋 ")
+" call coc#config("git.addGBlameToVirtualText", v:true)
+" call coc#config("git.virtualTextPrefix", "👋 ")
 
 
 call coc#config("diagnostic-languageserver.filetypes", {
