@@ -70,6 +70,11 @@
 [[layers]]
   name = "fzf"
 
+[[layers]]
+  name = "shell"
+  default_position = "bottom"
+  default_height = 30
+
 # ----------------- 添加的插件 -------------------------------------------------
 
 # coc.nvim 核心配置，不要删除
