@@ -46,9 +46,13 @@
 
 # ----------------- SpaceVim 添加的各种 layers ---------------------------------
 
+# 主题
+[[layers]]
+  name = "colorscheme"
+
 # 计算器, 日历, 书签等小工具
 [[layers]]
-  name = 'tools'
+  name = "tools"
 
 # 禁用 SpaceVim 的 checkers layer, 让 coc.nvim 来管理
 [[layers]]
@@ -71,16 +75,16 @@
 
 # coc.nvim 核心配置，不要删除
 [[custom_plugins]]
-  name = 'neoclide/coc.nvim'
+  name = "neoclide/coc.nvim"
   merge = 0
 
 # 优化 coc 的搜索界面
 [[custom_plugins]]
-  name = 'antoinemadec/coc-fzf'
+  name = "antoinemadec/coc-fzf"
   branch = 'release'
 
 [[custom_plugins]]
-    name = 'junegunn/fzf.vim'
+    name = "junegunn/fzf.vim"
 
 # 快速搜索文件和 buffer
 [[custom_plugins]]
@@ -89,30 +93,30 @@
 
 # 更加美观的 tagbar 
 [[custom_plugins]]
-    name = 'liuchengxu/vista.vim'
+    name = "liuchengxu/vista.vim"
 
 # 更加方便的调节窗口的大小
 [[custom_plugins]]
-    name = 'simeji/winresizer'
+    name = "simeji/winresizer"
 
 # 为 c/cpp 提供基于 lsp 的高亮
 [[custom_plugins]]
-    name = 'jackguo380/vim-lsp-cxx-highlight'
+    name = "jackguo380/vim-lsp-cxx-highlight"
 
 # 从 http://cplusplus.com/ 和 http://cppreference.com/ 获取文档
 [[custom_plugins]]
-    name = 'skywind3000/vim-cppman'
+    name = "skywind3000/vim-cppman"
 
 # 显示搜索的标号
 [[custom_plugins]]
-    name = 'google/vim-searchindex.git'
+    name = "google/vim-searchindex.git"
 
 # ----------------- 尝试的内容 -------------------------------------------------
 
 # debug 框架，尚未完全集成到本配置中
 [[custom_plugins]]
-  name = 'puremourning/vimspector'
+  name = "puremourning/vimspector"
 
 # 配合 sourcetrail 配合使用
 [[custom_plugins]]
-  name = 'CoatiSoftware/vim-sourcetrail'
+  name = "CoatiSoftware/vim-sourcetrail"
