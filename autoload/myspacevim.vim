@@ -7,11 +7,6 @@ func! myspacevim#before() abort
     set autowrite
     set autoread
 
-    " 重新映射 leader 键
-    let g:mapleader = ','
-    " 重新映射 window 键位
-    let g:spacevim_windows_leader = 'c'
-
     " 让 leaderf 可以搜索 git 的 submodule，否则 submodule 的文件会被自动忽略
     let g:Lf_RecurseSubmodules = 1
 
@@ -25,11 +20,7 @@ func! myspacevim#before() abort
     " 让file tree 显示文件图标，需要 terminal 安装 nerd font
     let g:spacevim_enable_vimfiler_filetypeicon = 1
     " 让 filetree 显示 git 的状态
-    " let g:spacevim_enable_vimfiler_gitstatus = 1
-
-    " 默认 markdown preview 在切换到其他的 buffer 或者 vim
-    " 失去焦点的时候会自动关闭 preview，让
-    let g:mkdp_auto_close = 0
+    let g:spacevim_enable_vimfiler_gitstatus = 1
 
     " 书签选中之后自动关闭 quickfix window
     let g:bookmark_auto_close = 1
@@ -96,26 +87,6 @@ func! myspacevim#before() abort
         echo 'done'
     endf
 
-    " 一键运行 rust 工程，不断向上查找直到遇到 Cargo.toml，然后执行 cargo run
-    func! CargoRun()
-      let cargo_run_path = fnamemodify(resolve(expand('%:p')), ':h')
-      while cargo_run_path != "/"
-        if filereadable(cargo_run_path . "/Cargo.toml")
-            echo cargo_run_path
-            exec "cd " . cargo_run_path
-            exec "!cargo run"
-            exec "cd -"
-            return
-        endif
-       let cargo_run_path = fnamemodify(cargo_run_path, ':h')
-      endwhile
-      echo "Cargo.toml not found !"
-    endf
-
-    " floaterm
-    let g:floaterm_keymap_prev   = '<C-p>'
-    let g:floaterm_keymap_new    = '<C-n>'
-    let g:floaterm_keymap_toggle = '<F5>'
 endf
 
 func! myspacevim#after() abort
